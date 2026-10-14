@@ -46,7 +46,7 @@ if __name__ == "__main__":
     plt.ylabel("Δw")
     plt.title("STDP learning window: simulation vs analytic")
     plt.text(22, 0.0028, "pre before post → LTP", fontsize=9, color='grey')
-    plt.text(-48, -0.0028, "post before pre → LTD", fontsize=9, color='grey')
+    plt.text(-48, -0.0035, "post before pre → LTD", fontsize=9, color='grey')
     plt.legend()
     plt.grid(alpha=0.3)
     plt.savefig(ASSETS / "stdp_window.png", dpi=150)
