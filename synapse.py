@@ -69,3 +69,13 @@ class STDPSynapses:
 
     #weight updates happen before the jumps, so that a synapse that fires this very step doesnt use its own spike in its own update 
     #doenst return anything, can use synapses.w when wanted 
+
+'''
+x *= decay_pre                      # decay all presynaptic traces
+x[pre_spikes] += 1.0                # jump on incoming spikes
+y *= decay_post
+if post_spike:
+    w += A_plus * x                 # all synapses at once
+    y += 1.0
+w[pre_spikes] -= A_minus * y
+'''
