@@ -8,7 +8,7 @@ from synapse import STDPSynapses
 
 #Poisson inputs → synapses → neuron, with the neuron’s spikes feeding back into the synapses
 class InputNeuronNetwork:
-    def __init__(self, neuron, synapses, input_rate, dt, rng, gain):
+    def __init__(self, neuron, synapses, input_rate, dt, rng, gain=34): #for gain, calibrated to give ~20 Hz with frozen weights at 0.5
         self.neuron = neuron 
         self.synapses = synapses
         self.n_inputs = synapses.n_synapses
